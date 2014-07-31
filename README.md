@@ -11,6 +11,6 @@ On the dokku server, you need to install the plugin in the standard Dokku way. S
 
 ```
 cd /var/lib/dokku/plugins
-git clone https://github.com/michaelshobbs/dokku-app-predeploy-tasks.git
+git clone https://github.com/michaelshobbs/dokku-hostname.git
 dokku plugins-install
 ```
