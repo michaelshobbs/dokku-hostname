@@ -3,5 +3,5 @@ set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 
 STDIN=$(cat)
 
-output="-h $( hostname )"
-echo "$STDIN$output"
+HOSTNAME=`hostname`
+echo "$STDIN --hostname=${HOSTNAME}"
