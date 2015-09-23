@@ -1,0 +1,6 @@
+[plugin]
+name = "dokku-hostname"
+description = "Sets the docker hostname option for dokku"
+version = "0.1.0"
+website_url = "https://github.com/michaelshobbs/dokku-hostname"
+[plugin.config]
