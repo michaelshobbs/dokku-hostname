@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
+
+STDIN=$(cat)
+HOSTNAME=$(hostname)
+echo "$STDIN --hostname=${HOSTNAME}"
