@@ -24,8 +24,8 @@ dokku plugin:install https://github.com/michaelshobbs/dokku-hostname.git dokku-h
 
 ## hooks
 
-This plugin provides hooks:
+This plugin provides the following triggers:
 
-* `docker-args-build`: adds the `--hostname` env var to the host's `hostname`
-* `docker-args-deploy`: adds the `--hostname` env var to the host's `hostname`
-* `docker-args-run`: adds the `--hostname` env var to the host's `hostname`
+* `docker-args-build`: adds the `--hostname` env var to the host's `hostname` or (if available) the AWS OpsWorks stack name + - + `hostname`
+* `docker-args-deploy`: adds the `--hostname` env var to the host's `hostname` or (if available) the AWS OpsWorks stack name + - + `hostname`
+* `docker-args-run`: adds the `--hostname` env var to the host's `hostname` or (if available) the AWS OpsWorks stack name + - + `hostname`
