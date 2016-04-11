@@ -1,6 +1,6 @@
-# dokku-hostname [![Build Status](https://img.shields.io/travis/michaelshobbs/dokku-hostname.svg?branch=master "Build Status")](https://travis-ci.org/michaelshobbs/dokku-hostname)
+# dokku-hostname [![Build Status](https://img.shields.io/circleci/project/michaelshobbs/dokku-hostname.svg?branch=master "Build Status")](https://circleci.com/gh/michaelshobbs/dokku-hostname/tree/master)
 
-Sets the docker hostname option for dokku (https://github.com/progrium/dokku)
+Sets the docker hostname option for dokku (https://github.com/dokku/dokku)
 
 Currently just sets --hostname=`hostname`.
 
