@@ -7,6 +7,11 @@ if [[ "$IMAGE_SOURCE_TYPE" == "dockerfile" ]] && [[ "$0" == *build ]]; then
   echo -n "$STDIN"
 else
   STDIN=$(cat)
-  HOSTNAME=$(hostname)
+  OPSWORKS_STACK_NAME=$(grep "OpsWorks Stack:" /etc/motd 2>/dev/null || true)
+  if [[ -n "$OPSWORKS_STACK_NAME" ]]; then
+    HOSTNAME=$(echo "$OPSWORKS_STACK_NAME" "$(hostname)" | awk -F: '{ print $2 }' | xargs | tr '[:upper:]' '[:lower:]' | sed -e 's: :-:g')
+  else
+    HOSTNAME=$(hostname)
+  fi
   echo -n "$STDIN --hostname=${HOSTNAME}"
 fi
